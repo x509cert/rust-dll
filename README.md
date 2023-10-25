@@ -5,15 +5,15 @@ the DLL from current C/C++ code.
 
 In this example, you can verify the DLL exports functions correctly using dumpbin:
 
-dumpbin .\rust_dll.dll /exports
-Microsoft (R) COFF/PE Dumper Version 14.38.33030.0
-Copyright (C) Microsoft Corporation.  All rights reserved.
+    dumpbin .\rust_dll.dll /exports
+    Microsoft (R) COFF/PE Dumper Version 14.38.33030.0
+    Copyright (C) Microsoft Corporation.  All rights reserved.
 
-Dump of file .\rust_dll.dll
+    Dump of file .\rust_dll.dll
 
-File Type: DLL
+    File Type: DLL
 
-  Section contains the following exports for rust_dll.dll
+    Section contains the following exports for rust_dll.dll
 
     00000000 characteristics
     FFFFFFFF time date stamp
