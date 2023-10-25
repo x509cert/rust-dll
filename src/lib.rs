@@ -13,6 +13,7 @@ pub extern "C" fn free_string(ptr: *mut c_char) {
     unsafe { CString::from_raw(ptr) };  // This will free the string
 }
 
+// this function does not use #[no_mangle] and will not be exported from the DLL
 pub extern "C" fn this_is_mangled(value: i32) -> i32 {
-    42
+    value * 2
 }
