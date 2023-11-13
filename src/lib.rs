@@ -10,7 +10,9 @@ pub extern "C" fn build_string(value: i32) -> *mut c_char {
 #[no_mangle]
 pub extern "C" fn free_string(ptr: *mut c_char) {
     if ptr.is_null() { return }
-    unsafe { CString::from_raw(ptr) };  // This will free the string
+    unsafe { 
+        let _ = CString::from_raw(ptr); 
+    };  // This will free the string, too
 }
 
 // this function does not use #[no_mangle] and will not be exported from the DLL
